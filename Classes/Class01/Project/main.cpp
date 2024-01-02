@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Ponto {
   private:
     double _x;
@@ -8,9 +10,14 @@ class Ponto {
       _x = x;
       _y = y;
     }
+  
+  void imprime() {
+    std::cout << "(" << _x  << ", " << _y << ")" << std::endl;
+  }
 };
 
 int main() {
   Ponto p = Ponto(2.0, 3.0);
+  p.imprime();
   return 0;
 }
