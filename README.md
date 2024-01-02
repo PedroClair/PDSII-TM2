@@ -10,7 +10,8 @@ Template to storage codes and notes about software development
 - git status
 - git add . (<files>)
 - git commit -m "msg"
-- git push 
+- git push
+- git branch -c newBranch
 - git checkout newBranch
 - git push origin head
 - git config user.name "name"
