@@ -2,23 +2,42 @@
 
 class Ponto {
   private:
-    double _x;
-    double _y;
+    double coordenadaHorizontalX;
+    double coordenadaVerticalY;
 
   public:
-    Ponto(double x, double y);
-    void imprime() {
-      std::cout << "(" << _x  << ", " << _y << ")" << std::endl;
-    }
+    Ponto(double, double);
+    void imprime(); 
+    Ponto get();
+    void set(double, double);
 };
 
 int main() {
-  Ponto p = Ponto(2.0, 3.0);
-  p.imprime();
+  Ponto origem = Ponto(2.0, 3.0);
+  origem.imprime();
+  Ponto original = origem.get();
+  original.imprime();
+  original.set(4.0, 5.0);
+  original.imprime();
   return 0;
 }
 
 Ponto::Ponto(double x, double y) {
-  _x = x;
-  _y = y;
+  coordenadaHorizontalX = x;
+  coordenadaVerticalY = y;
 }
+
+void Ponto::imprime(){
+  std::cout << "(" << coordenadaHorizontalX << ", " << coordenadaVerticalY << ")" << std::endl;
+}
+
+Ponto Ponto::get(){
+  Ponto original = Ponto(coordenadaHorizontalX, coordenadaVerticalY);
+  return original;
+}
+
+void Ponto::set(double x, double y){
+  coordenadaHorizontalX = x;
+  coordenadaVerticalY = y;
+}
+
