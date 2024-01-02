@@ -1,6 +1,5 @@
 #include <iostream>
-#include "../include/ponto.hpp"
-//#include "../include/automovel/Ford.hpp"
+#include "./include/ponto.hpp"
 
 int main (){
     Ponto origem = Ponto(2.0, 3.0);
