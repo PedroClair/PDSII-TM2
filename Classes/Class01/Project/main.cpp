@@ -1,17 +1,6 @@
 #include <iostream>
-
-class Ponto {
-  private:
-    double coordenadaHorizontalX;
-    double coordenadaVerticalY;
-
-  public:
-    Ponto(double, double);
-    void imprime(); 
-    Ponto get();
-    void set(double, double);
-    void feature();
-};
+#include <string>
+#include <vector>
 
 class Revisao {
   private:
@@ -36,52 +25,58 @@ int main() {
   return 0;
 }
 
-Ponto::Ponto(double x, double y) {
-  coordenadaHorizontalX = x;
-  coordenadaVerticalY = y;
-}
-
-void Ponto::imprime(){
-  std::cout << "(" << coordenadaHorizontalX << ", " << coordenadaVerticalY << ")" << std::endl;
-}
-
-Ponto Ponto::get(){
-  Ponto original = Ponto(coordenadaHorizontalX, coordenadaVerticalY);
-  return original;
-}
-
-void Ponto::set(double x, double y){
-  coordenadaHorizontalX = x;
-  coordenadaVerticalY = y;
-}
-
-void Ponto::feature(){
-  Ponto origem = Ponto(2.0, 3.0);
-  origem.imprime();
-  Ponto original = origem.get();
-  original.imprime();
-  original.set(4.0, 5.0);
-  original.imprime();
-}
-
 void Revisao::exemplo01(){
-  std::cout << "Codigo 01" << std::endl; 
+  std::cout << "Codigo 01" << std::endl;
+  #include <stdio.h>
+  printf("Oi mundo C!\n\n");
 }
 
 void Revisao::exemplo02(){
-  std::cout << "Codigo 02" << std::endl; 
+  std::cout << "Codigo 02" << std::endl;
+  using namespace std;
+  cout << "Oi mundo C++!\n" << endl; 
 }
 
 void Revisao::exemplo03(){
-  std::cout << "Codigo 03" << std::endl; 
+  std::cout << "Codigo 03" << std::endl;
+  std::string curto = "Hello World";
+  std::string longo = "Essa é uma string grande para o exemplo!";
+
+  std::cout << curto << std::endl;
+  std::cout << longo << std::endl;
+
+  std::cout << longo.length() << std::endl;
+  std::cout << std::endl; 
 }
 
 void Revisao::exemplo04(){
-  std::cout << "Codigo 04" << std::endl; 
+  std::cout << "Codigo 04" << std::endl;
+  using namespace std; 
+  string a;
+  a = "123456";
+  string b;
+  b = "123456";
+  bool igual = (a == b);
+  cout << igual << endl;
+  cout << a[0] << endl;
+  cout << b[5] << endl;
+  a[0] = '0';
+  cout << a << endl;
+  string c = a + b;
+  cout << c << endl;
+  cout << endl;
 }
 
 void Revisao::exemplo05(){
   std::cout << "Codigo 05" << std::endl; 
+  using namespace std;
+  string nome;
+  int idade;
+  cout << "Digite o seu nome: ";
+  cin >> nome;
+  cout << "Digite sua idade: ";
+  cin >> idade;
+  cout << "Ola " << nome << " voce tem " << idade << " anos." << endl;
 }
 
 void Revisao::exemplos(){
