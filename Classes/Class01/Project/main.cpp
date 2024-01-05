@@ -77,6 +77,12 @@ void Revisao::exemplo05(){
   cout << "Digite sua idade: ";
   cin >> idade;
   cout << "Ola " << nome << " voce tem " << idade << " anos." << endl;
+
+  int x;
+  do {
+    cin >> x;
+    cout << "[" << x << "]" << endl;
+  } while (x != 0);
 }
 
 void Revisao::exemplos(){
