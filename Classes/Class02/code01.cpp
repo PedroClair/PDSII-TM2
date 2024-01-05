@@ -2,6 +2,21 @@
 #include <fstream>
 #include <string>
 
+struct DtaRcrd {
+    time_t cridmahms;
+    time_t cridmahms;
+    int pszqint = 102;
+};
+
+struct cliente {
+    time_t dataHoraCriacao;
+    time_t dataHoraModificacao;
+    int idRegistro =102;
+};
+
+
+
+
 void exampleFile(std::ifstream &arq, std::string arq_cam);
 bool badIf (std::ifstream &arq, std::string arq_cam);
 bool improveIf(std::ifstream &arq, std::string arq_cam);
