@@ -15,7 +15,6 @@ class Ponto {
     void feature();
 };
 
-
 int main() {
   Ponto origem = Ponto(0, 0);
   origem.feature();
