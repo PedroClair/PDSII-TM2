@@ -2,8 +2,10 @@
 #include <fstream>
 #include <string>
 
-bool badIf (std::ifstream &arq, std::string arq_cam);
 void exampleFile(std::ifstream &arq, std::string arq_cam);
+bool badIf (std::ifstream &arq, std::string arq_cam);
+bool improveIf(std::ifstream &arq, std::string arq_cam);
+
 
 int main () {
     // Open the file for reading
@@ -39,9 +41,7 @@ bool badIf (std::ifstream &arq, std::string arq_cam){
     if (arq_cam != ""){
         if (arq.is_open()) {
             if (std::getline(arq, linha)){
-                //std::cout << linha.find("importe") << std::endl;
-                if (linha.find("importante") != std::string::npos){
-                    //std::cout << arq_cam << std::endl;
+                if (linha.find("importante")){
                     return true;
                 } else {
                     return false;
@@ -54,5 +54,22 @@ bool badIf (std::ifstream &arq, std::string arq_cam){
         return false;
     }
     return false;
+}
+
+bool improveIf(std::ifstream &arq, std::string arq_cam){
+    std::string linha;
+    if (arq_cam != "")
+        return false;
+
+    if (!arq.is_open())
+        return false;
+
+    bool encontrou = false;
+    if (getline(arq, linha)){
+        if (linha.find("importante") != std::string::npos){
+            return encontrou;
+        }
+    }
+    return encontrou;
 }
 
