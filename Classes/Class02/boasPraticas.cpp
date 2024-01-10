@@ -83,3 +83,11 @@ bool improveIf(std::ifstream &arq, std::string arq_cam){
     return encontrou;
 }
 
+std::list<std::vector<int>> pegarValores(std::list<std::vector<int>> lista1){
+    std::list<std::vector<int>> lista2;
+    for (std::vector<int> x:lista1)
+        if (x[0] == 4)
+            lista2.push_back(x);
+    return lista2;
+}
+

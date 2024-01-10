@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
+#include <list>
 
 class Ponto {
   private:
@@ -27,6 +29,7 @@ struct cliente {
     int idRegistro =102;
 };
 
+std::list<std::vector<int>> pegarValores(std::list<std::vector<int>> lista1);
 void exampleFile(std::ifstream &arq, std::string arq_cam);
 bool badIf (std::ifstream &arq, std::string arq_cam);
 bool improveIf(std::ifstream &arq, std::string arq_cam);
