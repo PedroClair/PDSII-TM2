@@ -1,4 +1,4 @@
-#include "boasPraticas.hpp"
+#include "boasPraticas.h"
 
 Ponto::Ponto(double x, double y) {
   coordenadaHorizontalX = x;

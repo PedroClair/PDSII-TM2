@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "boasPraticas.hpp"
+#include "boasPraticas.h"
 
 int main() {
   Ponto origem = Ponto(0, 0);
