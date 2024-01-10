@@ -1,36 +1,31 @@
-#include <iostream>
-#include <fstream>
-#include <string>
+#include "boasPraticas.hpp"
 
-struct DtaRcrd {
-    time_t cridmahms;
-    time_t cridmahms;
-    int pszqint = 102;
-};
+Ponto::Ponto(double x, double y) {
+  coordenadaHorizontalX = x;
+  coordenadaVerticalY = y;
+}
 
-struct cliente {
-    time_t dataHoraCriacao;
-    time_t dataHoraModificacao;
-    int idRegistro =102;
-};
+void Ponto::imprime(){
+  std::cout << "(" << coordenadaHorizontalX << ", " << coordenadaVerticalY << ")" << std::endl;
+}
 
+Ponto Ponto::get(){
+  Ponto original = Ponto(coordenadaHorizontalX, coordenadaVerticalY);
+  return original;
+}
 
+void Ponto::set(double x, double y){
+  coordenadaHorizontalX = x;
+  coordenadaVerticalY = y;
+}
 
-
-void exampleFile(std::ifstream &arq, std::string arq_cam);
-bool badIf (std::ifstream &arq, std::string arq_cam);
-bool improveIf(std::ifstream &arq, std::string arq_cam);
-
-
-int main () {
-    // Open the file for reading
-    std::ifstream inputFile("entrada.txt", std::fstream::in);
-    std::string name = "codigo";
-    std::cout << badIf(inputFile, name) << std::endl;
-
-    //Close the file
-    inputFile.close();
-    return 0;
+void Ponto::feature(){
+  Ponto origem = Ponto(2.0, 3.0);
+  origem.imprime();
+  Ponto original = origem.get();
+  original.imprime();
+  original.set(4.0, 5.0);
+  original.imprime();
 }
 
 void exampleFile(std::ifstream &inputFile, std::string arq_cam){
