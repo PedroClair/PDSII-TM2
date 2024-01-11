@@ -1,4 +1,4 @@
-#include "boasPraticas.h"
+#include "boasPraticas.hpp"
 
 Ponto::Ponto(double x, double y) {
   coordenadaHorizontalX = x;
@@ -85,9 +85,18 @@ bool improveIf(std::ifstream &arq, std::string arq_cam){
 
 std::list<std::vector<int>> pegarValores(std::list<std::vector<int>> lista1){
     std::list<std::vector<int>> lista2;
-    for (std::vector<int> x:lista1)
+    for (std::vector<int> x : lista1)
         if (x[0] == 4)
             lista2.push_back(x);
     return lista2;
 }
 
+const int kPosicaoStatus = 0;
+const int kValorBandeira = 4;
+std::list<std::vector<int>> pegarCelulasMarcadas(std::list<std::vector<int>> const& tabuleiro){
+  std::list<std::vector<int>> celulasMarcadas;
+    for (std::vector<int> celula : tabuleiro)
+      if (celula[kPosicaoStatus] == kValorBandeira)
+        celulasMarcadas.push_back(celula);
+  return celulasMarcadas;
+}
