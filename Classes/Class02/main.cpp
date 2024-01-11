@@ -6,12 +6,17 @@
 
 using namespace std;
 
-int main() {
-
-  cout << "hello" << endl;
-       
+int main (){
+  int x = 0;
+  cout << x << endl;
   return 0;
 }
+
+// public static constants
+// private static variables
+// private instance variables
+// public functions
+// private methods called by public functios
 
 
 
