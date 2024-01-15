@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-std=c++11 -Wall
+CFLAGS=-std=c++20 -Wall
 TARGET=program
 
 BUILD_DIR = ./build
