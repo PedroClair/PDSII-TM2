@@ -6,7 +6,7 @@ int main() {
     ferrari.start();
     ferrari.drive();
     ferrari.stop();
-    
+
     Carro::Ford ford;
     ford.start();
     ford.drive();
