@@ -3,7 +3,8 @@
 using namespace std;
 
 int main (){
-    int *p = 10;
-    cout << p << endl;
+    int *p, a=10;
+    *p = a;
+    cout << *p << endl;
     return 0;
 }
