@@ -1,5 +1,5 @@
-#ifndef LISTA_H
-#define LISTA_H
+#ifndef L1CAP1_H
+#define L1CAP1_H
 
 void lista1Cap1 ();
 
