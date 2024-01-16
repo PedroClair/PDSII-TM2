@@ -6,7 +6,8 @@ BUILD_DIR = ./build
 SRC_DIR = ./src
 INCLUDE_DIR = ./include
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Ferrari.o ${BUILD_DIR}/Ford.o ${BUILD_DIR}/main.o
+#./build/program: ./build/Ferrari.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Ferrari.o ${BUILD_DIR}/Ford.o ${BUILD_DIR}/main.o #./build/program: ./build/Ferrari.o 
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 
 ${BUILD_DIR}/Ferrari.o: ${INCLUDE_DIR}/automovel/Ferrari.hpp ${SRC_DIR}/automovel/Ferrari.cpp
