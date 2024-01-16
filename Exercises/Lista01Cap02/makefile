@@ -10,7 +10,7 @@ ${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/compra.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 
 ${BUILD_DIR}/compra.o: ${INCLUDE_DIR}/compra.hpp ${SRC_DIR}/compra.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${INCLUDE_DIR}/compra.cpp -o ${BUILD_DIR}/compra.o
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/compra.cpp -o ${BUILD_DIR}/compra.o
 
 ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/compra.hpp ${SRC_DIR}/main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/main.cpp -o ${BUILD_DIR}/main.o

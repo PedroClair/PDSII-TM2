@@ -3,6 +3,19 @@
 
 using namespace std;
 
-void lista1Cap2(){
-    cout << "Resolucao lista1Cap2" << endl;
+int numeroDeParcelas(const float custoInicial, const float jurosAoAno, const float parcelaMensal){
+    const float jurosAoMes = jurosAoAno/12;
+    float dividaAtual = custoInicial;
+    
+    int count = 0;
+    while (dividaAtual > 0) {
+        dividaAtual = montanteMensal(dividaAtual, jurosAoMes, parcelaMensal);
+        count = count + 1;
+    };
+
+    return count;
+}
+
+float montanteMensal(float dividaAtual, const float jurosAoMes, const float parcelaMensal){
+    return dividaAtual + (dividaAtual * jurosAoMes) - parcelaMensal;
 }
