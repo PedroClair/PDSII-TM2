@@ -25,3 +25,4 @@ ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/compra.hpp ${SRC_DIR}/main.cpp
 
 # ./build/main.o: ./include/compra.hpp ./src/main.cpp
 #	g++	-std=c++20 -Wall -I ./include -c ./src/main.cpp -o ./build/main.o
+
