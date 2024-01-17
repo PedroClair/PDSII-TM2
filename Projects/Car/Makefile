@@ -21,5 +21,5 @@ ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/automovel/Ferrari.hpp ${INCLUDE_DIR}/automov
 
 # Rule for cleaning files generated during compilation.
 # Call 'make clean' to use it
-clean:
-	rm -f ${BUILD_DIR}/*
+# clean:
+# 	rm -r ${BUILD_DIR}/*.o
