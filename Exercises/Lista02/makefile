@@ -1,3 +1,8 @@
+CC = g++
+CFLAGS = -std=c++20 -Wall
+TARGET = program
+
+
 default:
-	g++ -std=c++20 -Wall main.cpp -o program
-	program
+	${CC} ${CFLAGS} -Wall main.cpp -o ${TARGET}
+	${TARGET}
