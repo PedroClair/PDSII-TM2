@@ -3,5 +3,6 @@
 
 void questao1Declaracoes();
 void questao2PonteiroParaConstantes();
+int* questao3ArrayReverso(int, int, int);
 
 #endif

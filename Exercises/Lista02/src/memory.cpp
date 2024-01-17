@@ -28,7 +28,6 @@ void questao1Declaracoes(){
     int* const atv6 = &num2; 
     cout << "Atv6: " << atv6 << endl;
 }
-
 void questao2PonteiroParaConstantes(){ 
     //2. "Dê uma explicação sucinta sobre a diferenca entre um ponteiro constante e um ponteiro para um tipo constante."
     const int *ptr1; //O tipo é constante, o que significa que não pode ser modificado o valor da variável.
@@ -42,4 +41,48 @@ void questao2PonteiroParaConstantes(){
     int *const ptr2 = &num; // O ponteiro aponta para um tipo constante, ou seja, não pode ser modificado para apontar para outro tipo após a inicialização.
     *ptr2 = 20; // OK, pode modificar o valor apontado pelo ponteiro
     //ptr2 = &y1; // Erro, não pode modificar o ponteiro para apontar para outro endereço
+}
+int* questao3ArrayReverso(int a, int b, int c){
+    int *vetor = new int[3];
+    int *maior = &a, *medio = &b, *menor = &c;
+    if (a >= b) {
+        if (b >= c){
+            cout << *maior << " < " << *medio << " < " << *menor <<  endl; 
+        } else {
+            medio = &c;
+            menor = &b;
+            if (c >= a ){
+                maior = &c;
+                medio = &a;
+            } else {
+                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+            }
+        }
+    } else {
+        maior = &b;
+        medio = &a;
+        if (a >= c){
+            cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+        } else {
+            menor = &a;
+            medio = &c;
+            if (b >= c){
+                maior = &b;
+                medio = &c;
+                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+            } else {
+                maior = &c;
+                medio = &b;
+                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+            }
+        }
+    }
+    vetor[0] = *maior;
+    vetor[1] = *medio;
+    vetor[2] = *menor;
+    for (int v = 0; v < 3; v++){
+        cout << "check vetor: " << vetor[v] << endl;
+    }
+    cout << "." << endl;
+    return vetor;
 }
