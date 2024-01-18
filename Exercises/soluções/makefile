@@ -8,7 +8,6 @@ SRC_DIR = ./src
 
 ${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/memory.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
-	${BUILD_DIR}/${TARGET}
 
 ${BUILD_DIR}/memory.o:  ${INCLUDE_DIR}/lista02/memory.hpp ${SRC_DIR}/lista02/memory.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/lista02/ -c ${SRC_DIR}/lista02/memory.cpp -o  ${BUILD_DIR}/memory.o

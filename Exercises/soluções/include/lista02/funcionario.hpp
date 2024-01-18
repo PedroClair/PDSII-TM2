@@ -13,5 +13,7 @@ struct Employee {
 
 Employee* insereFuncionario();
 void questao4GeraEMostraEquipe();
+void fill_data (Employee* , int );
+void questao5FillData();
 
 #endif

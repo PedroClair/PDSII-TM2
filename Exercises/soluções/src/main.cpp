@@ -1,9 +1,6 @@
-#include "funcionario.hpp"
+#include <iostream>
 
 int main() {
-
-    questao4GeraEMostraEquipe();
+    std::cout << "Hello World" << std::endl;
     return 0;
 }
-
-
