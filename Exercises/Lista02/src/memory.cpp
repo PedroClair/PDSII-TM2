@@ -43,12 +43,12 @@ void questao2PonteiroParaConstantes(){
     //ptr2 = &y1; // Erro, não pode modificar o ponteiro para apontar para outro endereço
 }
 int* questao3ArrayReverso(int a, int b, int c){
-    cout << "Resolucao bruta da questao 3!" << endl;
+    //cout << "Resolucao bruta da questao 3!" << endl;
     static int vetor[3];
     int *maior = &a, *medio = &b, *menor = &c;
     if (a >= b) {
         if (b >= c){
-            cout << *maior << " < " << *medio << " < " << *menor <<  endl; 
+            //cout << *maior << " < " << *medio << " < " << *menor <<  endl; 
         } else {
             medio = &c;
             menor = &b;
@@ -56,41 +56,37 @@ int* questao3ArrayReverso(int a, int b, int c){
                 maior = &c;
                 medio = &a;
             } else {
-                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+                //cout << *maior << " < " << *medio << " < " << *menor <<  endl;
             }
         }
     } else {
         maior = &b;
         medio = &a;
         if (a >= c){
-            cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+            //cout << *maior << " < " << *medio << " < " << *menor <<  endl;
         } else {
             menor = &a;
             medio = &c;
             if (b >= c){
                 maior = &b;
                 medio = &c;
-                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+                //cout << *maior << " < " << *medio << " < " << *menor <<  endl;
             } else {
                 maior = &c;
                 medio = &b;
-                cout << *maior << " < " << *medio << " < " << *menor <<  endl;
+                //cout << *maior << " < " << *medio << " < " << *menor <<  endl;
             }
         }
     }
     vetor[0] = *maior;
     vetor[1] = *medio;
     vetor[2] = *menor;
-    for (int v = 0; v < 3; v++){
-        cout << "check vetor: " << vetor[v] << endl;
-    }
-    cout << "." << endl;
     return vetor;
 }
 void questao3VetorDecrescente(){
     int *vet;
     vet = questao3ArrayReverso (1, 2, 3);
     for (int i=0; i<3; i++){
-        cout << vet[i] << endl;
+        cout << vet[i] << " ";
     }
 }
