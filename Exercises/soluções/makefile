@@ -17,21 +17,3 @@ ${BUILD_DIR}/funcionario.o:  ${INCLUDE_DIR}/lista02/funcionario.hpp ${SRC_DIR}/l
 
 ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/lista02/memory.hpp ${INCLUDE_DIR}/lista02/funcionario.hpp ${SRC_DIR}/main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/lista02/ -c ${SRC_DIR}/main.cpp -o  ${BUILD_DIR}/main.o
-
-# default
-# (01) g++ -std=c++20 -Wall main.cpp -o program
-# (02) g++ -std=c++20 -Wall memory.cpp main.cpp -o program
-# (03) ----------------------------------------------------
-# CC = g++
-# CFLAGS = -std=c++20 -Wall -g
-# TARGET = program
-
-# ${TARGET}: main.o memory.o
-# 	${CC} ${CFLAGS} -o ${TARGET} main.o memory.o
-# 	${TARGET}
-
-# main.o: memory.hpp memory.cpp
-# 	${CC} ${CFLAGS} -c main.cpp
-
-# memory.o: memory.hpp
-# (03) -----------------------------------------------------

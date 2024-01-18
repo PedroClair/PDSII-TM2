@@ -26,3 +26,21 @@ ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/compra.hpp ${SRC_DIR}/main.cpp
 # ./build/main.o: ./include/compra.hpp ./src/main.cpp
 #	g++	-std=c++20 -Wall -I ./include -c ./src/main.cpp -o ./build/main.o
 
+# default
+# (01) g++ -std=c++20 -Wall main.cpp -o program
+# (02) g++ -std=c++20 -Wall memory.cpp main.cpp -o program
+# (03) ----------------------------------------------------
+# CC = g++
+# CFLAGS = -std=c++20 -Wall -g
+# TARGET = program
+
+# ${TARGET}: main.o memory.o
+# 	${CC} ${CFLAGS} -o ${TARGET} main.o memory.o
+# 	${TARGET}
+
+# main.o: memory.hpp memory.cpp
+# 	${CC} ${CFLAGS} -c main.cpp
+
+# memory.o: memory.hpp
+# (03) -----------------------------------------------------
+
