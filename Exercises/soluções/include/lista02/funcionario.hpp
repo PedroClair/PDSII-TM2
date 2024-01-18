@@ -2,14 +2,16 @@
 #define FUNCIONARIO_H
 
 #include <iostream>
+#include <string>
 
-struct Funcionario {
-    std::string nome;
-    std::string endereco;
-    int CEP;
+// Struct para armazenar informações do funcionário
+struct Employee {
+    std::string name;
+    std::string address;
+    std::string zipcode;
 };
 
-void quadroDeEmpregados();
-
+Employee* insereFuncionario();
+void questao4GeraEMostraEquipe();
 
 #endif

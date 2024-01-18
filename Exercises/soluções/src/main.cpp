@@ -1,23 +1,9 @@
-#include <iostream>
-#include "memory.hpp"
 #include "funcionario.hpp"
 
-using namespace std;
+int main() {
 
-void executaResolucoes();
-
-
-int main () {
-    //executaResolucoes();
-    quadroDeEmpregados();
+    questao4GeraEMostraEquipe();
     return 0;
 }
-
-void executaResolucoes(){
-    questao1Declaracoes();
-    questao2PonteiroParaConstantes();
-    questao3VetorDecrescente();    
-}
-
 
 
