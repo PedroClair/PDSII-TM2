@@ -10,14 +10,14 @@ ${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/memory.o ${BUILD_DIR}/funcionario.o ${BUILD
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 	${BUILD_DIR}/${TARGET}
 
-${BUILD_DIR}/memory.o:  ${INCLUDE_DIR}/memory.hpp ${SRC_DIR}/memory.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/memory.cpp -o  ${BUILD_DIR}/memory.o
+${BUILD_DIR}/memory.o:  ${INCLUDE_DIR}/lista02/memory.hpp ${SRC_DIR}/lista02/memory.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/lista02/ -c ${SRC_DIR}/lista02/memory.cpp -o  ${BUILD_DIR}/memory.o
 
-${BUILD_DIR}/funcionario.o:  ${INCLUDE_DIR}/funcionario.hpp ${SRC_DIR}/funcionario.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/funcionario.cpp -o  ${BUILD_DIR}/funcionario.o
+${BUILD_DIR}/funcionario.o:  ${INCLUDE_DIR}/lista02/funcionario.hpp ${SRC_DIR}/lista02/funcionario.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/lista02/ -c ${SRC_DIR}/lista02/funcionario.cpp -o  ${BUILD_DIR}/funcionario.o
 
-${BUILD_DIR}/main.o: ${INCLUDE_DIR}/memory.hpp ${INCLUDE_DIR}/funcionario.hpp ${SRC_DIR}/main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/main.cpp -o  ${BUILD_DIR}/main.o
+${BUILD_DIR}/main.o: ${INCLUDE_DIR}/lista02/memory.hpp ${INCLUDE_DIR}/lista02/funcionario.hpp ${SRC_DIR}/main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/lista02/ -c ${SRC_DIR}/main.cpp -o  ${BUILD_DIR}/main.o
 
 # default
 # (01) g++ -std=c++20 -Wall main.cpp -o program
