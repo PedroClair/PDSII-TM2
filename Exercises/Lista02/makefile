@@ -6,15 +6,18 @@ BUILD_DIR = ./build
 INCLUDE_DIR = ./include
 SRC_DIR = ./src
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/main.o ${BUILD_DIR}/memory.o
-	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/main.o ${BUILD_DIR}/memory.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/memory.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/main.o
+	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 	${BUILD_DIR}/${TARGET}
 
-${BUILD_DIR}/main.o: ${INCLUDE_DIR}/memory.hpp ${SRC_DIR}/memory.cpp ${SRC_DIR}/main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/main.cpp -o  ${BUILD_DIR}/main.o
-
 ${BUILD_DIR}/memory.o:  ${INCLUDE_DIR}/memory.hpp ${SRC_DIR}/memory.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SRC_DIR}/memory.cpp -o  ${BUILD_DIR}/memory.o
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/memory.cpp -o  ${BUILD_DIR}/memory.o
+
+${BUILD_DIR}/funcionario.o:  ${INCLUDE_DIR}/funcionario.hpp ${SRC_DIR}/funcionario.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/funcionario.cpp -o  ${BUILD_DIR}/funcionario.o
+
+${BUILD_DIR}/main.o: ${INCLUDE_DIR}/memory.hpp ${INCLUDE_DIR}/funcionario.hpp ${SRC_DIR}/main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/ -c ${SRC_DIR}/main.cpp -o  ${BUILD_DIR}/main.o
 
 # default
 # (01) g++ -std=c++20 -Wall main.cpp -o program
