@@ -8,7 +8,7 @@ void executaResolucoes();
 
 
 int main () {
-    executaResolucoes();
+    //executaResolucoes();
     quadroDeEmpregados();
     return 0;
 }
