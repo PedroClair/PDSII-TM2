@@ -43,7 +43,8 @@ void questao2PonteiroParaConstantes(){
     //ptr2 = &y1; // Erro, não pode modificar o ponteiro para apontar para outro endereço
 }
 int* questao3ArrayReverso(int a, int b, int c){
-    int *vetor = new int[3];
+    cout << "Resolucao bruta da questao 3!" << endl;
+    static int vetor[3];
     int *maior = &a, *medio = &b, *menor = &c;
     if (a >= b) {
         if (b >= c){
@@ -85,4 +86,11 @@ int* questao3ArrayReverso(int a, int b, int c){
     }
     cout << "." << endl;
     return vetor;
+}
+void questao3VetorDecrescente(){
+    int *vet;
+    vet = questao3ArrayReverso (1, 2, 3);
+    for (int i=0; i<3; i++){
+        cout << vet[i] << endl;
+    }
 }
