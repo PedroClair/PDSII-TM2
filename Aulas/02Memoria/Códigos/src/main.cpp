@@ -22,7 +22,7 @@ int main() {
 
 void function01(int &i) {
     int j = 10;
-    //i = &j; !OK  Error a value of type "int *" cannot be assigned to an entity of type "int"C/C++(513)
+    //i = &j; !OK  Error a value of type "int *" cannot be assigned to an entity of type "int" C/C++(513)
 }
 
 void function02(int *i) {
@@ -57,8 +57,6 @@ void chamaAddOneStaticValue() {
     cout << "Depois: " << a << endl;
 }
 
-
-
 void ponteiroBoaPratica() {
     int *ptr_a = nullptr;
     ptr_a = new int;
@@ -73,7 +71,6 @@ void ponteiroBoaPratica() {
     cout << "Conteudo de ptr_a: " << *ptr_a << endl;
     delete ptr_a;
 }
-
 
 void ponteiroParaStruct(){
     struct data {int dia; int mes; int ano;};
@@ -143,7 +140,6 @@ void exemplo2 (){
     cout << "*p1 == " << *p1 << endl;
     cout << "*p2 == " << *p2 << endl;
 }
-
 
 double multiplyByTwo(double input) {
     double twice = input * 2.0;
