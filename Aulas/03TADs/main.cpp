@@ -2,28 +2,13 @@
 
 using namespace std;
 
-class Lista {
-    int node;
-    Lista *next;
+struct Ponto3D {
+    double coordenadaX;
+    double coordenadaY;
+    double coordenadaZ;
+};
+
+int main ( ){
+    cout << "TAD de ponto 3d!!" << endl;
+    return 0;
 }
-
-int main() {
-    Lista *l;
-    int x = 20;
-
-    l->inserir(x);
-    // ...
-}
-
-void inserir (int x){
-    l->arranjo[...] = x;
-    ...
-}
-
-void inserir (int x) {
-    Celula *c = criar_celula(x);
-    l->ultimo = c;
-}
-
-Para: "Chefe DCC" <chefe@dcc.ufmg.br>
-Cc: chefia@dcc.ufmg.br
