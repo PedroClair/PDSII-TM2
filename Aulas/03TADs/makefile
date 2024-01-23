@@ -1,3 +1,8 @@
+CC = g++
+CFLAGS = -std=c++20 -Wall
+TARGET = programa
+
 default:
-	g++ -std=c++20 -Wall ponto3d.cpp main.cpp -o programa
-	programa.exe
+	${CC} ${CFLAGS} *.cpp -o ${TARGET}
+	${TARGET}
+
