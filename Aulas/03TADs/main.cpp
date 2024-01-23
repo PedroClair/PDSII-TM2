@@ -1,21 +1,7 @@
-#include <cstdlib>
 #include <iostream>
-#include <cmath>
+#include "ponto3d.hpp"
 
 using namespace std;
-
-struct Ponto3D {
-    float coordenadaX;
-    float coordenadaY;
-    float coordenadaZ;
-
-    float calcularDistancia (Ponto3D* p2){
-        float dx = p2->coordenadaX;
-        float dy = p2->coordenadaY;
-        float dz = p2->coordenadaZ;
-        return sqrt(dx*dx + dy*dy + dz*dz);
-    }
-};
 
 int main ( ){
     Ponto3D* p1 = new Ponto3D;
