@@ -3,6 +3,6 @@ CFLAGS = -std=c++20 -Wall
 TARGET = programa
 
 default:
-	${CC} ${CFLAGS} *.cpp -o ${TARGET}
+	${CC} ${CFLAGS} circunferencia.cpp main.cpp -o ${TARGET}
 	${TARGET}
 
