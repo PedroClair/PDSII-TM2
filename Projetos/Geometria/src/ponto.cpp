@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Ponto.hpp"
+#include "../include/ponto.hpp"
 
 Ponto::Ponto(double x, double y) {
   coordenadaHorizontalX = x;

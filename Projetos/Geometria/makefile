@@ -1,16 +1,17 @@
-CC=g++
-CFLAGS=-std=c++20 -Wall
+CC = g++
+CFLAGS = -std=c++20 -Wall -g
+TARGET = programa
 
-all: main
-Ponto.o: Ponto.hpp Ponto.cpp
-	${CC} ${CFLAGS} -c Ponto.cpp
+BUILD_OBJ = ./build/obj
+BUILD_APP = ./build/app
+INCLUDE = ./include
+SRC = ./src
 
-main.o: Ponto.hpp main.cpp
-	${CC} ${CFLAGS} -c main.cpp
+${TARGET}: main.o ponto.o
+	${CC} ${CFLAGS} ${BUILD_OBJ}/*.o -o ${BUILD_APP}/${TARGET}
 
-main: main.o Ponto.o
-	${CC} ${CFLAGS} -o main main.o Ponto.o
-# Rule for cleaning files generated during compilation.
-# Call 'make clean' to use it
-clean:
-	rm -f main *.o
+main.o: ${INCLUDE}/ponto.hpp ${SRC}/main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/main.cpp -o ${BUILD_OBJ}/main.o
+
+ponto.o: ${INCLUDE}/ponto.hpp ${SRC}/ponto.cpp
+	${CC} ${CFLAGS} -c ${SRC}/ponto.cpp -o ${BUILD_OBJ}/ponto.o
