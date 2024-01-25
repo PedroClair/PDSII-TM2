@@ -26,4 +26,5 @@
 - git checkout main
 - git merge iss53
 - git commit -a -m "issue 53 up to main"
+- git push (update github)
 
