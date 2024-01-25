@@ -15,6 +15,7 @@
 - git branch -d hotfix (delete hotfix branch)
 
 ## Return to issue
+- git checkout iss53
 - - complete the informations in this readme and build folder.
 - git commit -a -m "Finish the new footer [issue 53]"
 - git merge main (hotfix solution)
@@ -22,4 +23,7 @@
 - git commit -a -m "Finish the new footer [issue 53]"
 
 ## Return to main
+- git checkout main
+- git merge iss53
+- git commit -a -m "issue 53 up to main"
 
