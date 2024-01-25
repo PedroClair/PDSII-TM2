@@ -7,9 +7,9 @@ int main() {
     ferrari.drive();
     ferrari.stop();
 
-    Carro::Ford ford;
-    ford.start();
-    ford.drive();
-    ford.stop();
+    //Carro::Ford ford;
+    //ford.start();
+    //ford.drive();
+    //ford.stop();
     return 0;
 }
