@@ -1,19 +1,5 @@
 #include "List.hpp"
 
-void List::insertNode(int data) {
-    Node* aux = new Node;
-    aux->data = data;
-    aux->next = nullptr;
-    
-    if (head == nullptr) {
-        head = aux;
-        tail = aux;
-    } else {
-        tail->next = aux;
-        tail = aux;
-    }
-}
-
 void List::removeNode(int data) {
     Node *current = head;
     Node *previous = nullptr;
@@ -35,15 +21,26 @@ void List::removeNode(int data) {
     }
 }
 
-void List::display(){
-    if (head) {
-        cout << head->data << endl;
-        Node* aux = head;
-        while (aux->next != nullptr){
-            aux = aux->next;
-            cout << aux->data << endl;
-        }   
+void List::insertNode(int data) {
+    Node* aux = new Node;
+    aux->data = data;
+    aux->next = nullptr;
+    
+    if (head == nullptr) {
+        head = aux;
+        tail = aux;
     } else {
-        cout << "Lista vazia" << endl;
+        tail->next = aux;
+        tail = aux;
     }
+}
+
+
+void List::display() {
+    Node *aux = head;
+    while (aux != nullptr) {
+        cout << aux->data << "\t";
+        aux = aux->next;
+    }
+    cout << endl;
 }

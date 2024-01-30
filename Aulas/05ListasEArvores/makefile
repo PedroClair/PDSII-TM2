@@ -9,7 +9,7 @@ BUILD_LIB = ${BUILD}/lib
 INCLUDE = ./include
 SRC = ./src
 
-${BUILD}/${TARGET}: ${BUILD_BIN}/main.o ${BUILD_BIN}/list.o
+${BUILD}/${TARGET}: ${BUILD_BIN}/main.o ${BUILD_BIN}/list.o ${BUILD_BIN}/listD.o
 	${CC} ${CFLAGS} ${BUILD_BIN}/*.o -o ${BUILD}/${TARGET}
 	${BUILD}/${TARGET}
 
@@ -18,6 +18,10 @@ ${BUILD_BIN}/main.o: ${INCLUDE}/lista/list.hpp ${SRC}/main.cpp
 
 ${BUILD_BIN}/list.o: ${INCLUDE}/lista/list.hpp ${SRC}/lista/list.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE}/lista/ -c ${SRC}/lista/list.cpp -o ${BUILD_BIN}/list.o
+
+${BUILD_BIN}/listD.o: ${INCLUDE}/lista/listD.hpp ${SRC}/lista/listD.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/lista/ -c ${SRC}/lista/listD.cpp -o ${BUILD_BIN}/listD.o
+
 
 # CMD step by step
 # g++ -std=c++20 -Wall -I include/lista/ -c src/lista/list.cpp -o build/bin/list.o
