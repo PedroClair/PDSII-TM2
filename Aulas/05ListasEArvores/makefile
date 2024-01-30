@@ -1,13 +1,35 @@
 # Makefile Structured
-program: main.o list.o
-	g++ -std=c++20 -Wall build/bin/*.o -o build/programa
-	.\build\programa.exe
+CC = g++
+CFLAGS = -std=c++20 -Wall
+TARGET = programa
 
-main.o: 
-	g++ -std=c++20 -Wall -I include/lista/ -c src/main.cpp -o build/bin/main.o
+BUILD = ./build
+BUILD_BIN = ${BUILD}/bin
+BUILD_LIB = ${BUILD}/lib
+INCLUDE = ./include
+SRC = ./src
 
-list.o:
-	g++ -std=c++20 -Wall -I include/lista/ -c src/lista/list.cpp -o build/bin/list.o
+${BUILD}/${TARGET}: ${BUILD_BIN}/main.o ${BUILD_BIN}/list.o
+	${CC} ${CFLAGS} ${BUILD_BIN}/*.o -o ${BUILD}/${TARGET}
+	${BUILD}/${TARGET}
+
+${BUILD_BIN}/main.o: ${INCLUDE}/lista/list.hpp ${SRC}/main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/lista/ -c ${SRC}/main.cpp -o ${BUILD_BIN}/main.o
+
+${BUILD_BIN}/list.o: ${INCLUDE}/lista/list.hpp ${SRC}/lista/list.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/lista/ -c ${SRC}/lista/list.cpp -o ${BUILD_BIN}/list.o
+
+
+# Makefile Structured without tags
+# program: main.o list.o
+# 	g++ -std=c++20 -Wall build/bin/*.o -o build/programa
+# 	.\build\programa.exe
+
+# main.o: 
+# 	g++ -std=c++20 -Wall -I include/lista/ -c src/main.cpp -o build/bin/main.o
+
+# list.o:
+# 	g++ -std=c++20 -Wall -I include/lista/ -c src/lista/list.cpp -o build/bin/list.o
 
 # build/programa: Generalization
 # 	g++ -std=c++20 -Wall -I include/lista/ src/main.cpp src/lista/list.cpp -o build/programa
