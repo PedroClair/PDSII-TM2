@@ -1,8 +1,14 @@
 #include "List.hpp"
 
 int main() {
-    List lista;
-    lista.insertNode(111);
-    lista.insertNode(222);
-    return 0;
+    Node a;
+    Node b;
+
+    a.data = 99;
+    a.next = &b;
+
+    b.data = 123;
+
+    cout << a.data << endl;
+    cout << a.next->data << endl;
 }
