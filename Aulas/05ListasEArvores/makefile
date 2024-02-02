@@ -1,6 +1,6 @@
 # Makefile Structured
 CC = g++
-CFLAGS = -std=c++20 -Wall
+CFLAGS = -std=c++11 -Wall
 TARGET = programa
 
 BUILD = ./build
@@ -13,7 +13,7 @@ ${BUILD}/${TARGET}: ${BUILD_BIN}/main.o ${BUILD_BIN}/list.o ${BUILD_BIN}/listD.o
 	${CC} ${CFLAGS} ${BUILD_BIN}/*.o -o ${BUILD}/${TARGET}
 	${BUILD}/${TARGET}
 
-${BUILD_BIN}/main.o: ${INCLUDE}/lista/list.hpp ${SRC}/main.cpp
+${BUILD_BIN}/main.o: ${INCLUDE}/lista/*.hpp ${SRC}/main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE}/lista/ -c ${SRC}/main.cpp -o ${BUILD_BIN}/main.o
 
 ${BUILD_BIN}/list.o: ${INCLUDE}/lista/list.hpp ${SRC}/lista/list.cpp

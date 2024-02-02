@@ -22,3 +22,5 @@
     "version": 4
 } 
 '''
+# With out intelisence
+- mingw32-make in -std=c++11

@@ -2,7 +2,14 @@
 #include "ListD.hpp"
 
 int main() {
-    ListD lista;
+    List lista;
+    lista.insertNode(111);
+    lista.insertNode(222);
+    lista.insertNode(333);
+    lista.display();
+
+    ListD listadupla;
+    listadupla.display();
     
     return 0;
 }
