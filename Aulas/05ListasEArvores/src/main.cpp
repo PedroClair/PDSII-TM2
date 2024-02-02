@@ -1,5 +1,6 @@
 #include "List.hpp"
 #include "ListD.hpp"
+#include "BST.hpp"
 
 int main() {
     List lista;
@@ -10,6 +11,9 @@ int main() {
 
     ListD listadupla;
     listadupla.display();
+
+    BST arvore;
+    arvore.display();
     
     return 0;
 }
