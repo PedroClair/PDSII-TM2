@@ -13,8 +13,10 @@ struct BST {
     NodeT* root = nullptr;
     void insertNodeHelper(NodeT* root, int data);
     void insertNode(int data);
-    void removeNode(int data);
+    //void removeNode(int data);
     void display();
 };
+
+void inorder(NodeT* n);
 
 #endif

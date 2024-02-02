@@ -34,6 +34,15 @@ void BST::insertNodeHelper(NodeT* root, int data){
     }
 }
 
+void inorder(NodeT* n){
+    if(n == nullptr)
+        return;
+    inorder(n->esq);
+    cout << n->data << " ";
+    inorder(n->dir);
+}
+
 void BST::display(){
-    cout << "Mostra a BST!!!" << endl;
+    inorder(root);
+    cout << endl;
 }

@@ -14,6 +14,13 @@ int main() {
 
     BST arvore;
     arvore.display();
-    
+
+    BST bst;
+    bst.insertNode(5);
+    bst.insertNode(2);
+    bst.insertNode(7);
+    bst.insertNode(7);
+    bst.display();
+
     return 0;
 }
