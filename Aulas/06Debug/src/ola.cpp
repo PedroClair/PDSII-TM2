@@ -1,5 +1,5 @@
 #include "ola.hpp"
 
 void hello(){
-     cout << "Project Template" << endl;
+     cout << "Starting Debug Project Template ..." << endl;
 }
