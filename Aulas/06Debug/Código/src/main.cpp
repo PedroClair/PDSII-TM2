@@ -1,25 +1,31 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
-int findMaxCor(int *array, int len, int max);
+int fatorial(int n);
+double series(double x, int n);
 
 int main() {
-    int arr[5] = {17, 21, 44, 2, 60};
-    int max = 0;
-    if (findMaxCor(arr, 5, max) != 0) {
-        cout << "Ocorreu erro!" << endl;
-        exit(1);
-    }
-    cout << "Valor maximo e: " << max << endl;
+    cout << pow(2, 0) / fatorial(0) << endl;
+    cout << pow(2, 1) / fatorial(0) << endl;
+    cout << pow(2, 2) / fatorial(0) << endl;
+    cout << pow(2, 3)  << endl;
     return 0;
 }
 
-int findMaxCor(int *array, int len, int max) {
-	max = array[0];
-	for(int i=1; i <= len; i++) {
-		if(max < array[i]) {
-			max = array[i];
-		}
-	}
-	return 0;
+int fatorial(int n) {
+  int fat = 1;
+  for (int i = 1; i <= n; i++)
+    fat = fat * i;
+  return fat;
 }
+double series(double x, int n) {
+  double xpow, seriesValue;
+  for (int k = 1; k <= n; k++) {
+    xpow = pow(x, k);
+    seriesValue += xpow / fatorial(k);
+  }
+  return seriesValue;
+}
+
+

@@ -2,11 +2,19 @@
 
 void hello(){
 	cout << "Starting Debug Project Template ..." << endl;
-	cout << "The following codes have problems. Can you correct them?" << endl;
+	cout << "The codes into ola.hpp contract have problems. Can you correct them?" << endl;
+	cout << "Copy to the main program and good luck!" << endl;
 }
 
-/*----------------------------EXEMPLO 01-----------------------------------*/
-int mainDepuracaoExemplo1(){
+/*----------------------------EXEMPLO_01-----------------------------------
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double series(double x, int n);
+int fatorial(int n);
+
+int main(){
 	cout << series(2, 3) << endl;
 	return 0;
 }
@@ -26,9 +34,10 @@ double series(double x, int n) {
 	}
 	return seriesValue;
 }
+-------------------------------------------------------------------------
+----------------------------EXEMPLO_02-----------------------------------
 
-/*
-int mainGDBExemplo() {
+int main() {
 	int arr[5] = {17, 21, 44, 2, 60};
 	int max;
 	if (findMax(arr, 5, max) != 0) {
@@ -37,7 +46,7 @@ int mainGDBExemplo() {
 	}
 	cout << "Valor maximo e: " << max << endl;
 	return 0;
-} */
+} 
 
 int findMax(int *array, int len, int max) {
 	max = array[0];
@@ -48,3 +57,5 @@ int findMax(int *array, int len, int max) {
 	}
 	return 0;
 }
+
+---------------------------------------------------------------------------*/
