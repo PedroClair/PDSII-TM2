@@ -7,9 +7,9 @@
 using namespace std;
 
 void hello();
-int fatorial(int);
-double series (double, int);
-int findMax(int*, int, int);
-int mainDepuracaoExemplo1();
+//int fatorial(int);
+//double series (double, int);
+//int findMax(int*, int, int);
+//int mainDepuracaoExemplo1();
 
 #endif

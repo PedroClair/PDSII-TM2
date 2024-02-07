@@ -2,7 +2,7 @@
 
 void hello(){
 	cout << "Starting Debug Project Template ..." << endl;
-	cout << "The codes into ola.hpp contract have problems. Can you correct them?" << endl;
+	cout << "The commented codes into ola.hpp contract have problems. Can you correct them?" << endl;
 	cout << "Copy to the main program and good luck!" << endl;
 }
 
