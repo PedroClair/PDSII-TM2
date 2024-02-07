@@ -11,8 +11,8 @@ SRC = ./src
 ${TARGET}: main.o ola.o
 	${CC} ${CFLAGS} ${BUILD_BIN}/main.o ${BUILD_BIN}/ola.o -o  ${BUILD}/${TARGET}
 
-main.o: ${INCLUDE}/ola.hpp ${SRC}/main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/main.cpp -o ${BUILD_BIN}/main.o
+main.o: ${INCLUDE}/ola/ola.hpp ${SRC}/main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ola/ -c ${SRC}/main.cpp -o ${BUILD_BIN}/main.o
 
-ola.o: ${INCLUDE}/ola.hpp ${SRC}/ola.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/ola.cpp -o ${BUILD_BIN}/ola.o
+ola.o: ${INCLUDE}/ola/ola.hpp ${SRC}/ola/ola.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ola/ -c ${SRC}/ola/ola.cpp -o ${BUILD_BIN}/ola.o
