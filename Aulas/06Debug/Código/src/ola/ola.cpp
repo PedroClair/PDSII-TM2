@@ -2,6 +2,7 @@
 
 void hello(){
 	cout << "Starting Debug Project Template ..." << endl;
+	cout << "The following codes have problems. Can you correct them?" << endl;
 }
 
 int fatorial(int n) {
