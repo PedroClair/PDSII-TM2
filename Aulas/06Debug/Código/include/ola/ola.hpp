@@ -7,7 +7,8 @@
 using namespace std;
 
 void hello();
-int fatorial(int n);
-double series (double x, int n);
+int fatorial(int);
+double series (double, int);
+int findMax(int*, int, int);
 
 #endif
