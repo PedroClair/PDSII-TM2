@@ -5,7 +5,7 @@ int findMaxCor(int *array, int len, int max);
 
 int main() {
     int arr[5] = {17, 21, 44, 2, 60};
-    int max;
+    int max = 0;
     if (findMaxCor(arr, 5, max) != 0) {
         cout << "Ocorreu erro!" << endl;
         exit(1);
