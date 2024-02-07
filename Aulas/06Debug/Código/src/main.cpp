@@ -1,22 +1,18 @@
-#include <iostream>
+#include<iostream>
+#include<list>
 using namespace std;
 
-int findMax(int *array, int len) {
-  int max = -1;
-  for(int i=1; i < len; i++) {
-    if(max < array[i]) {
-      max = array[i];
-    }
-  }
-  return max;
-}
+struct TADExemplo {
+  int atributo;
+};
 
 int main() {
-  int arr[5] = {60, 17, 21, 44, 2};
-
-  int max = findMax(arr, 5);
-  cout << "Valor maximo e: " << max;
-
+  list<TADExemplo*> itens;
+  itens.push_back(new TADExemplo());
+  itens.push_back(new TADExemplo());
   return 0;
 }
+
+
+
 
