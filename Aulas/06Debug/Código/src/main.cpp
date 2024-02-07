@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 
-
 int findMax(int *array, int len) {
   int max = -1;
-  for(int i=1; i <= len; i++) {
+  for(int i=1; i < len; i++) {
     if(max < array[i]) {
       max = array[i];
     }
   }
-  return 0;
+  return max;
 }
 
 int main() {
