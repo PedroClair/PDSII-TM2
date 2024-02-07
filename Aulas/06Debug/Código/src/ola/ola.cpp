@@ -10,6 +10,7 @@ int fatorial(int n) {
 	fat = fat * i;
 	return fat;
 }
+
 double series(double x, int n) {
 	double xpow, seriesValue;
 	for (int k = 1; k <= n; k++) {
