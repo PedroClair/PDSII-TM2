@@ -24,14 +24,12 @@ class Ponto {
 //#include "Ponto.hpp"
  
 class Circunferencia {
- 
   public:
     Ponto* _centro;
     double _raio;
  
     Circunferencia(Ponto* centro, double raio);
-    double calcularArea();
-    
+    double calcularArea();  
 };
  
 #endif
@@ -41,15 +39,18 @@ using namespace std;
  
 int main() {
  
-  Circunferencia* c1 = new Circunferencia(new Ponto(), 10);
+  Ponto *ptr = new Ponto();
+  Circunferencia* c1 = new Circunferencia(ptr, 10);
   cout << c1->calcularArea() << endl;
  
   Ponto p(5.0, 5.0);
   Circunferencia* c2 = new Circunferencia(&p, 10);
   cout << c2->calcularArea() << endl;
  
+  delete ptr;
   delete c1;
   delete c2;
+
  
   return 0;
 }
