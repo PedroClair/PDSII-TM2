@@ -6,8 +6,11 @@ BUILD_DIR = ./build
 INCLUDE_DIR = ./include
 SRC_DIR = ./src
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/circunferencia.o ${BUILD_DIR}/pontoV2.o ${BUILD_DIR}/classeTeste.o ${BUILD_DIR}/mathUtil.o ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/cliente.o ${BUILD_DIR}/circunferencia.o ${BUILD_DIR}/pontoV2.o ${BUILD_DIR}/classeTeste.o ${BUILD_DIR}/mathUtil.o ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
+
+${BUILD_DIR}/cliente.o:  ${INCLUDE_DIR}/pooEncapsulamento/cliente.hpp ${SRC_DIR}/pooEncapsulamento/cliente.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooEncapsulamento/ -c ${SRC_DIR}/pooEncapsulamento/cliente.cpp -o  ${BUILD_DIR}/cliente.o
 
 ${BUILD_DIR}/circunferencia.o: ${BUILD_DIR}/pontoV2.o ${INCLUDE_DIR}/pooClasse/circunferencia.hpp ${SRC_DIR}/pooClasse/circunferencia.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/circunferencia.cpp -o  ${BUILD_DIR}/circunferencia.o
@@ -55,7 +58,7 @@ ${BUILD_DIR}/ponto3d.o:  ${INCLUDE_DIR}/basico/ponto3d.hpp ${SRC_DIR}/basico/pon
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c ${SRC_DIR}/basico/ponto3d.cpp -o  ${BUILD_DIR}/ponto3d.o
 
 ${BUILD_DIR}/main.o: main.cpp #inserir os arquivos utilizados.
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/pooClasse/ -c main.cpp -o  ${BUILD_DIR}/main.o
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/pooClasse/ -I ${INCLUDE_DIR}/pooEncapsulamento/ -c main.cpp -o  ${BUILD_DIR}/main.o
 
 #clean:
 #	rm ./build/ -> a -> mkdir build
