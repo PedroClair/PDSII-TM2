@@ -14,7 +14,7 @@ class Ponto {
         void testaInicio();
         void setarXY(int x, int y);
         void setarXY(int xy);
-        void Ponto::testaSets();
+        void testaSets();
 };
 
 #endif //PONTO_H
