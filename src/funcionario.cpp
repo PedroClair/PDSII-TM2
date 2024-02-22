@@ -61,7 +61,7 @@ void fill_data (Employee *employees, int totalEmployees){
 }
 
 void questao5FillData(){
-    Employee* funcionarios;
+    Employee* funcionarios = new Employee();
     fill_data(funcionarios, 3);
     delete [] funcionarios;
 }
