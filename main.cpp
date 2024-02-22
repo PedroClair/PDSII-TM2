@@ -1,12 +1,14 @@
-#include "testObject.hpp"
+#include "estatico.hpp"
+
+int ClasseAtributoEstatico::numero = 0;
 
 int main() {
-    std::cout << "Antes!" << std::endl;
-    int i = 0;
-    while (i < 5){
-        TestObject o(i);
-        i++;
-    }
-    std::cout << "Depois!" << std::endl;
+    ClasseAtributoEstatico c1;
+    c1.imprimirNumero();
+
+    ClasseAtributoEstatico c2;
+    c2.imprimirNumero();
+
+    c1.imprimirNumero();
     return 0;
 }
