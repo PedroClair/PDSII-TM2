@@ -31,5 +31,5 @@ ${BUILD_DIR}/ponto3d.o:  ${INCLUDE_DIR}/basico/ponto3d.hpp ${SRC_DIR}/basico/pon
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c ${SRC_DIR}/basico/ponto3d.cpp -o  ${BUILD_DIR}/ponto3d.o
 
 ${BUILD_DIR}/main.o: main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c main.cpp -o  ${BUILD_DIR}/main.o
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/poo/ -c main.cpp -o  ${BUILD_DIR}/main.o
 
