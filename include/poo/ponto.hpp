@@ -8,7 +8,7 @@ class Ponto {
     public:
         int coordenadaX;
         int coordenadaY;
-    
+        Ponto ();
         Ponto (int x, int y);
         Ponto (int xy);
         void testaInicio();

@@ -1,14 +1,8 @@
 #include "ponto.hpp"
 
-Ponto::Ponto(int x, int y){
-    this->coordenadaX = x;
-    this->coordenadaY = y;
-}
-
-Ponto::Ponto(int xy){
-    this->coordenadaX = xy;
-    this->coordenadaY = xy;
-}
+Ponto::Ponto(int x, int y){this->coordenadaX = x; this->coordenadaY = y;}
+Ponto::Ponto() : Ponto(-1, -1) {}
+Ponto::Ponto(int xy) : Ponto(xy, xy){}
 
 void Ponto::testaSets(){
     Ponto p(0);
