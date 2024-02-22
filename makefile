@@ -6,8 +6,11 @@ BUILD_DIR = ./build
 INCLUDE_DIR = ./include
 SRC_DIR = ./src
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
+
+${BUILD_DIR}/testObject.o:  ${INCLUDE_DIR}/poo/testObject.hpp ${SRC_DIR}/poo/testObject.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/testObject.cpp -o  ${BUILD_DIR}/testObject.o
 
 ${BUILD_DIR}/ponto.o:  ${INCLUDE_DIR}/poo/ponto.hpp ${SRC_DIR}/poo/ponto.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/ponto.cpp -o  ${BUILD_DIR}/ponto.o

@@ -2,6 +2,7 @@
 
 void function01(int &i) {
     int j = 10;
+    j++;
     //i = &j; !OK  Error a value of type "int *" cannot be assigned to an entity of type "int" C/C++(513)
 }
 
@@ -56,7 +57,6 @@ void ponteiroParaStruct(){
     struct data {int dia; int mes; int ano;};
     struct data d1;
     struct data *ptr = &d1;
-    int i = 0;
 
     (*ptr).dia = 8;
     (*ptr).mes = 3;
@@ -70,12 +70,14 @@ void ponteiroParaVoid(){
     int i = 10;
     int *int_ptr;
     void *void_ptr;
-    double *double_ptr;
+    double *double_ptr{nullptr};
     int_ptr = &i;
-    void_ptr = int_ptr; // OK
+    void_ptr = &int_ptr; // OK
     //double_ptr = int_ptr; // Error: a value of type "int *" cannot be assigned to an entity of type "double *" C/C++(513)
     //double_ptr = void_ptr; // Error: a value of type "void *" cannot be assigned to an entity of type "double *"C/C++(513)
     void_ptr = double_ptr; // OK
+    void_ptr = &i;
+    i = sizeof(void_ptr);
 }
 
 void alocacaoDeVetor(){
