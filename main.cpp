@@ -1,7 +1,15 @@
-#include <iostream>
-#include "mathUtil.hpp"
-
+#include "ClasseTeste.hpp"
+ 
 int main() {
-    std::cout << MathUtils::calculaMedia(10, 20) << std::endl;
-    return 0;
+ 
+  ClasseTeste c1(10, "Joao da Silva");
+ 
+  c1.metodoA();
+  c1.metodoB(50);
+  c1.metodoA();
+ 
+  ClasseTeste c2;
+  c2.metodoA();
+ 
+  return 0;
 }
