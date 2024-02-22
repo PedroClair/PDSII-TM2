@@ -9,6 +9,8 @@ class Ponto {
         int coordenadaX;
         int coordenadaY;
     
+        Ponto (int x, int y);
+        Ponto (int xy);
         void testaInicio();
         void setarXY(int x, int y);
         void setarXY(int xy);
