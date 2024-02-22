@@ -42,3 +42,5 @@ ${BUILD_DIR}/ponto3d.o:  ${INCLUDE_DIR}/basico/ponto3d.hpp ${SRC_DIR}/basico/pon
 ${BUILD_DIR}/main.o: main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/poo/ -c main.cpp -o  ${BUILD_DIR}/main.o
 
+#clean:
+#	rm ./build/ -> a -> mkdir build
