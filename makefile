@@ -6,26 +6,32 @@ BUILD_DIR = ./build
 INCLUDE_DIR = ./include
 SRC_DIR = ./src
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/classeTeste.o ${BUILD_DIR}/mathUtil.o ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/circunferencia.o ${BUILD_DIR}/pontoV2.o ${BUILD_DIR}/classeTeste.o ${BUILD_DIR}/mathUtil.o ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
 
-${BUILD_DIR}/classeTeste.o:  ${INCLUDE_DIR}/poo/classeTeste.hpp ${SRC_DIR}/poo/classeTeste.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/classeTeste.cpp -o  ${BUILD_DIR}/classeTeste.o
+${BUILD_DIR}/circunferencia.o: ${BUILD_DIR}/pontoV2.o ${INCLUDE_DIR}/pooClasse/circunferencia.hpp ${SRC_DIR}/pooClasse/circunferencia.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/circunferencia.cpp -o  ${BUILD_DIR}/circunferencia.o
 
-${BUILD_DIR}/mathUtil.o:  ${INCLUDE_DIR}/poo/mathUtil.hpp ${SRC_DIR}/poo/mathUtil.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/mathUtil.cpp -o  ${BUILD_DIR}/mathUtil.o
+${BUILD_DIR}/pontoV2.o:  ${INCLUDE_DIR}/pooClasse/pontoV2.hpp ${SRC_DIR}/pooClasse/pontoV2.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/pontoV2.cpp -o  ${BUILD_DIR}/pontoV2.o
 
-${BUILD_DIR}/estatico.o:  ${INCLUDE_DIR}/poo/estatico.hpp ${SRC_DIR}/poo/estatico.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/estatico.cpp -o  ${BUILD_DIR}/estatico.o
+${BUILD_DIR}/classeTeste.o:  ${INCLUDE_DIR}/pooClasse/classeTeste.hpp ${SRC_DIR}/pooClasse/classeTeste.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/classeTeste.cpp -o  ${BUILD_DIR}/classeTeste.o
 
-${BUILD_DIR}/testObject.o:  ${INCLUDE_DIR}/poo/testObject.hpp ${SRC_DIR}/poo/testObject.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/testObject.cpp -o  ${BUILD_DIR}/testObject.o
+${BUILD_DIR}/mathUtil.o:  ${INCLUDE_DIR}/pooClasse/mathUtil.hpp ${SRC_DIR}/pooClasse/mathUtil.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/mathUtil.cpp -o  ${BUILD_DIR}/mathUtil.o
 
-${BUILD_DIR}/ponto.o:  ${INCLUDE_DIR}/poo/ponto.hpp ${SRC_DIR}/poo/ponto.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/ponto.cpp -o  ${BUILD_DIR}/ponto.o
+${BUILD_DIR}/estatico.o:  ${INCLUDE_DIR}/pooClasse/estatico.hpp ${SRC_DIR}/pooClasse/estatico.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/estatico.cpp -o  ${BUILD_DIR}/estatico.o
 
-${BUILD_DIR}/casa.o:  ${INCLUDE_DIR}/poo/casa.hpp ${SRC_DIR}/poo/casa.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/casa.cpp -o  ${BUILD_DIR}/casa.o
+${BUILD_DIR}/testObject.o:  ${INCLUDE_DIR}/pooClasse/testObject.hpp ${SRC_DIR}/pooClasse/testObject.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/testObject.cpp -o  ${BUILD_DIR}/testObject.o
+
+${BUILD_DIR}/ponto.o:  ${INCLUDE_DIR}/pooClasse/ponto.hpp ${SRC_DIR}/pooClasse/ponto.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/ponto.cpp -o  ${BUILD_DIR}/ponto.o
+
+${BUILD_DIR}/casa.o:  ${INCLUDE_DIR}/pooClasse/casa.hpp ${SRC_DIR}/pooClasse/casa.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/pooClasse/ -c ${SRC_DIR}/pooClasse/casa.cpp -o  ${BUILD_DIR}/casa.o
 
 ${BUILD_DIR}/aluno.o:  ${INCLUDE_DIR}/basico/aluno.hpp ${SRC_DIR}/basico/aluno.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c ${SRC_DIR}/basico/aluno.cpp -o  ${BUILD_DIR}/aluno.o
@@ -49,7 +55,7 @@ ${BUILD_DIR}/ponto3d.o:  ${INCLUDE_DIR}/basico/ponto3d.hpp ${SRC_DIR}/basico/pon
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c ${SRC_DIR}/basico/ponto3d.cpp -o  ${BUILD_DIR}/ponto3d.o
 
 ${BUILD_DIR}/main.o: main.cpp
-	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/poo/ -c main.cpp -o  ${BUILD_DIR}/main.o
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -I ${INCLUDE_DIR}/pooClasse/ -c main.cpp -o  ${BUILD_DIR}/main.o
 
 #clean:
 #	rm ./build/ -> a -> mkdir build
