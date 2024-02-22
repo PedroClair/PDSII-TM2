@@ -10,6 +10,9 @@ class Ponto {
         int coordenadaY;
     
         void testaInicio();
+        void setarXY(int x, int y);
+        void setarXY(int xy);
+        void Ponto::testaSets();
 };
 
 #endif //PONTO_H

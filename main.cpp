@@ -1,6 +1,5 @@
-#include "casa.hpp"
+#include "ponto.hpp"
 
 int main() {
-    Casa c;
-    c.testaInicio();
+   
 }
