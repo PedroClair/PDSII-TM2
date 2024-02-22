@@ -6,8 +6,11 @@ BUILD_DIR = ./build
 INCLUDE_DIR = ./include
 SRC_DIR = ./src
 
-${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/mathUtil.o ${BUILD_DIR}/estatico.o ${BUILD_DIR}/testObject.o ${BUILD_DIR}/ponto.o ${BUILD_DIR}/casa.o ${BUILD_DIR}/aluno.o ${BUILD_DIR}/compra.o ${BUILD_DIR}/funcionario.o ${BUILD_DIR}/intro.o ${BUILD_DIR}/memory.o  ${BUILD_DIR}/ponteiro.o ${BUILD_DIR}/ponto3d.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
+
+${BUILD_DIR}/mathUtil.o:  ${INCLUDE_DIR}/poo/mathUtil.hpp ${SRC_DIR}/poo/mathUtil.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/mathUtil.cpp -o  ${BUILD_DIR}/mathUtil.o
 
 ${BUILD_DIR}/estatico.o:  ${INCLUDE_DIR}/poo/estatico.hpp ${SRC_DIR}/poo/estatico.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/poo/ -c ${SRC_DIR}/poo/estatico.cpp -o  ${BUILD_DIR}/estatico.o
