@@ -8,6 +8,8 @@ class Ponto {
     public:
         int coordenadaX;
         int coordenadaY;
+    
+        void testaInicio();
 };
 
 #endif //PONTO_H
