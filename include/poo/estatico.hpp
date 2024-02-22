@@ -8,8 +8,9 @@ class ClasseAtributoEstatico {
     static int numero;
     ClasseAtributoEstatico();
     void imprimirNumero ();
+    void testaEstatico ();
 };
- 
 
+//int ClasseAtributoEstatico::numero = 0;
 
 #endif // ESTATICO_H
