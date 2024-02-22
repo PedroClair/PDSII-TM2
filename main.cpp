@@ -11,7 +11,6 @@ int main() {
     ptr->coordenadaX = 2;
     ptr->coordenadaY = 2;
     ptr->coordenadaZ = 2;
-
     std::cout << p.calcularDistancia(ptr) << std::endl;
     return 0;
 }

@@ -30,7 +30,6 @@ ${BUILD_DIR}/ponteiro.o:  ${INCLUDE_DIR}/basico/ponteiro.hpp ${SRC_DIR}/basico/p
 ${BUILD_DIR}/ponto3d.o:  ${INCLUDE_DIR}/basico/ponto3d.hpp ${SRC_DIR}/basico/ponto3d.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c ${SRC_DIR}/basico/ponto3d.cpp -o  ${BUILD_DIR}/ponto3d.o
 
-
 ${BUILD_DIR}/main.o: main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR}/basico/ -c main.cpp -o  ${BUILD_DIR}/main.o
 
