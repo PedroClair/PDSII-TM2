@@ -1,7 +1,17 @@
 #include <iostream>
+#include <string>
+
+using namespace std;
  
 int main() {
-  std::cout << "Hello world" << std::endl;
+  string longo = "Um texto bem longo.";
+  string curto = "titulo";
+
+  cout << longo << endl;
+  cout << curto << endl;
+
+  cout << longo.length() << endl;
+
   return 0;
 }
 
