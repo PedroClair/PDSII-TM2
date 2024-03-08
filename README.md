@@ -5,6 +5,15 @@
 - GitHub -> Comunidade de compartilhamento e arquivamento de códigos
 
 # Introdução a Linguagem C++
-- Inclusão de bibliotecas padrões/auxiliares
-- Entrada e saída de dados
-- 
+- Inclusão de bibliotecas 
+- - string, iostream, fstream
+- Uso do namespace
+- Entrada e saída
+- Declaração de tipos 
+- Função
+- Condicional 
+- Laços de repetição, 
+- Manipulação de arquivos
+- Alocação e desalocação de memória
+
+# Modelo de Memória
