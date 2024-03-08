@@ -1,3 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+//Métodos inclusos
+void baum();
+
+//Execução principal
+int main () {
+
+  baum();
+
+  return 0;
+}
+
+//Implementação do código
+void baum(){
+  cout << "C tah baum?" << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -18,7 +60,7 @@ int main () {
 
 
 
-/*
+
 int main() {
 	int x;
 
