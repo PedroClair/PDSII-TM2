@@ -5,8 +5,8 @@
 using namespace std;
 
 int main () {
-    ifstream in("entrada.txt", fstream::in);
-    ofstream out("saída.txt", fstream::out);
+    ifstream in(".doc/entrada.txt", fstream::in);
+    ofstream out(".doc/saida.txt", fstream::out);
     string line;
     while (getline(in, line)){
         cout << "*" << line << "*" << endl;

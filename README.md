@@ -1,26 +1,10 @@
-# c_cpp_properties.json
+# Instalação das ferramentas de trabalho
+- MinGW -> Compilador C++
+- VSCode -> IDE de programação e edição de códigos
+- git -> Controle de versionamento
+- GitHub -> Comunidade de compartilhamento e arquivamento de códigos
 
-'''
-{
-    "configurations": [
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:\\MinGw\\bin\\g++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64"
-        }
-    ],
-    "version": 4
-} 
-'''
-# With out intelisence
-- mingw32-make in -std=c++11
+# Introdução a Linguagem C++
+- Inclusão de bibliotecas padrões/auxiliares
+- Entrada e saída de dados
+- 
