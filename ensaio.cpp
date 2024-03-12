@@ -3,19 +3,19 @@
 using namespace std;
 
 //Métodos inclusos
-void baum();
+void cumprimento();
 
 //Execução principal
 int main () {
 
-  baum();
+  cumprimento();
 
   return 0;
 }
 
 //Implementação do código
-void baum(){
-  cout << "C tah baum?" << endl;
+void cumprimento(){
+  cout << "C tah baum?!!!" << endl;
 }
 
 
