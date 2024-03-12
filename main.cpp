@@ -14,7 +14,7 @@ int main() {
 
 //Implementação do código
 void cumprimento(){
-  cout << "C tah baum?!!!" << endl;
+  cout << "C tah baum?" << endl;
 }
 
 void folhaDePagamento() {
@@ -56,4 +56,33 @@ void folhaDePagamento() {
     cout << "Desconto Impostos Estaduais: R$ " << descontoEstadual << endl;
     cout << "Desconto Sindicato: R$ " << descontoSindicato << endl;
     cout << "Salário Líquido: R$ " << salarioLiquido << endl;
+}
+
+void prestacoes() {
+    float valorAparelho = 1000.0;
+    float jurosMensal = 0.015; // 1.5% ao mês
+    float prestacaoMensal = 50.0;
+    float debito = valorAparelho;
+    int meses = 0;
+    float totalJuros = 0.0;
+
+    while (debito > 0) {
+        // Calcular juros do mês
+        float juros = debito * jurosMensal;
+
+        // Atualizar débito considerando o pagamento da prestação
+        debito -= (prestacaoMensal - juros);
+        totalJuros += juros;
+
+        // Verificar se o último pagamento será menor que a prestação
+        if (debito < prestacaoMensal) {
+            prestacaoMensal = debito + juros; // Último pagamento considera os juros
+            debito = 0; // Finaliza o pagamento
+        }
+
+        meses++;
+    }
+
+    cout << "Número de meses necessários: " << meses << endl;
+    cout << "Soma total paga em juros: R$ " << totalJuros << endl;
 }

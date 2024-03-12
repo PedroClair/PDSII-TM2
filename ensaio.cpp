@@ -15,7 +15,7 @@ int main () {
 
 //Implementação do código
 void cumprimento(){
-  cout << "C tah baum?!!!" << endl;
+  cout << "C tah baum?" << endl;
 }
 
 
