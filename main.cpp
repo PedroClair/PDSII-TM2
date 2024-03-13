@@ -7,9 +7,10 @@ void cumprimento();
 void folhaDePagamento();
 void prestacoes();
 
+//Método executável por padrão
 int main() {
-    //cumprimento();
-    //folhaDePagamento();
+    cumprimento();
+    folhaDePagamento();
     prestacoes();
     return 0;
 }
@@ -18,7 +19,6 @@ int main() {
 void cumprimento(){
   cout << "C tah baum?" << endl;
 }
-
 void folhaDePagamento() {
     float salarioHora = 16.78;
     float horasTrabalhadas, salarioBruto, salarioLiquido;
@@ -59,7 +59,6 @@ void folhaDePagamento() {
     cout << "Desconto Sindicato: R$ " << descontoSindicato << endl;
     cout << "Salário Líquido: R$ " << salarioLiquido << endl;
 }
-
 void prestacoes() {
     float valorAparelho = 1000.0;
     float jurosMensal = 0.015; // 1.5% ao mês
