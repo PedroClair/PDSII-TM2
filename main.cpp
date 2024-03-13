@@ -5,10 +5,12 @@ using namespace std;
 //Métodos inclusos
 void cumprimento();
 void folhaDePagamento();
+void prestacoes();
 
 int main() {
     //cumprimento();
-    folhaDePagamento();
+    //folhaDePagamento();
+    prestacoes();
     return 0;
 }
 
