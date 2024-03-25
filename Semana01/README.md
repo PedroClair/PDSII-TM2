@@ -1,7 +1,12 @@
-# Instalação das ferramentas de trabalho
+# Instalação das ferramentas de trabalho (Semana01)
 - MinGW -> Compilador C++
 - VSCode -> IDE de programação e edição de códigos
 - git -> Controle de versionamento
 - GitHub -> Comunidade de compartilhamento e arquivamento de códigos
-- Buscar PDSII-TM2 no GitHub
-- Clonar e executar o projeto
+- Execução:
+  - Busque no GitHub por PDSII-TM2 (Vá em code -> Selecione HTTPS -> Clique no botão ao lado da URL)
+  - Abra um terminal (CMD, PowerShell ou GitBash). 
+  - Clone o projeto (git clone https://github.com/PedroClair/PDSII-TM2.git)
+  - Entre na pasta copiada (cd .\PDSII-TM2\)
+  - Abra a IDE (code . -> para VSCode)
+  - Execute o Makefile -> mingw32-make
