@@ -1,9 +1,3 @@
-# Instalação das ferramentas de trabalho
-- MinGW -> Compilador C++
-- VSCode -> IDE de programação e edição de códigos
-- git -> Controle de versionamento
-- GitHub -> Comunidade de compartilhamento e arquivamento de códigos
-
 # Introdução a Linguagem C++
 - Inclusão de bibliotecas 
   - string, iostream, fstream
@@ -27,5 +21,3 @@
 - Ponteiros
   - Referência (&x)
   - Deferência (*x)
-
-# Boas Práticas

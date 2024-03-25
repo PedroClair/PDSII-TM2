@@ -1,0 +1,12 @@
+# Modelo de Memória
+- Hierarquia de Memória
+  - Princípio da localidade
+    - Temporal
+    - Espacial
+- Memória Virtual
+- Alocação e desalocação de memória
+  - Estática (STACK)
+  - Dinâmica (HEAP)
+- Ponteiros
+  - Referência (&x)
+  - Deferência (*x)
