@@ -9,8 +9,7 @@
   - Clone o projeto (git clone https://github.com/PedroClair/PDSII-TM2.git)
   - Entre na pasta copiada (cd .\PDSII-TM2\)
   - Abra a IDE (code . -> para VSCode)
-  - Compile o programa main (e.g. pode-se utilizar o Makefile -> mingw32-make)
-  - Execute o programa gerado (program.exe caso tenha utilizado o Makefile)
+  - Execute o programa (e.g. pode-se utilizar o Makefile -> mingw32-make)
 
 # Introdução a Linguagem C++ (Semana02)
 - Inclusão de bibliotecas 
