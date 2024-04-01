@@ -1,1 +1,20 @@
 # Boas Práticas (Semana04)
+- Apresentação do livro [Clean Code](https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675), para desenvolvimento ágil de software
+- Processo de desenvolvimento ao longo do tempo
+- Regras gerais
+  - Evitar o aninhamento de vários “ifs”
+  - Definir tipos específicos para o problema
+- Convenções
+  - Nomes
+  - Formatação
+  - Identação
+  - Métodos
+  - Passagem de Parâmetros
+  - Comentários
+  - Classes
+- Controle de Versão (Git & GitHub)
+- Especificação de Software
+  - Análise e modelagem
+  - Especificação de requisitos
+  - Histórias de Usuário
+  - Modelagem CRC
