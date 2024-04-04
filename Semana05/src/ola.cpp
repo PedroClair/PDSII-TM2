@@ -2,5 +2,5 @@
 
 //Implementação do código
 void cumprimento(){
-  std::cout << "C tah baum?" << std::endl;
+  std::cout << "C tah baum? Ou baum dimais?" << std::endl;
 }

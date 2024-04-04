@@ -9,14 +9,14 @@ INCLUDE = ./include
 ${BUILD}/${TARGET}: ${BUILD}/ola.o ${BUILD}/aluno.o ${BUILD}/circunferencia.o ${BUILD}/main.o
 	${CC} ${CFLAGS} ${BUILD}/aluno.o ${BUILD}/circunferencia.o ${BUILD}/ola.o ${BUILD}/main.o -o ${BUILD}/${TARGET}
 
-${BUILD}/ola.o:
-	${CC} ${CFLAGS} -c ola.cpp -o ${BUILD}/ola.o
+${BUILD}/ola.o: ${INCLUDE}/ola.hpp ${SRC}/ola.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/ola.cpp -o ${BUILD}/ola.o
 
-${BUILD}/aluno.o:
-	${CC} ${CFLAGS} -c aluno.cpp -o ${BUILD}/aluno.o
+${BUILD}/aluno.o: ${INCLUDE}/aluno.hpp ${SRC}/aluno.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/aluno.cpp -o ${BUILD}/aluno.o
 
-${BUILD}/circunferencia.o:
-	${CC} ${CFLAGS} -c circunferencia.cpp -o ${BUILD}/circunferencia.o
+${BUILD}/circunferencia.o: ${INCLUDE}/circunferencia.hpp ${SRC}/circunferencia.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ -c ${SRC}/circunferencia.cpp -o ${BUILD}/circunferencia.o
 
-${BUILD}/main.o:
-	${CC} ${CFLAGS} -c main.cpp -o ${BUILD}/main.o
+${BUILD}/main.o: ${INCLUDE}/ola.hpp ${INCLUDE}/aluno.hpp ${INCLUDE}/circunferencia.hpp main.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE}/ -c main.cpp -o ${BUILD}/main.o
