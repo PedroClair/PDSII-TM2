@@ -13,4 +13,6 @@ struct Aluno {
     float calcularRSG();
 };
 
+void criaPersona();
+
 #endif

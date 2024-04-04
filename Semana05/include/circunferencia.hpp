@@ -15,4 +15,6 @@ struct Ponto3D {
     float calcularDistancia(Ponto3D* p);
 };
 
+void calculaLocal();
+
 #endif
