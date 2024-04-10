@@ -58,3 +58,10 @@
   - Modelagem CRC
 
 # Tipos Abstratos de Dados (Semana 05)
+ - Definições
+ - Estruturas de dados existentes
+ - Biblioteca STL
+ - Modularização
+ - Depuração
+
+ # Avaliação e parte 1 do trabalho prático (Semana 06 e 07)
