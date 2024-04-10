@@ -1,9 +1,7 @@
 #include "ola.hpp"
 #include "circunferencia.hpp"
 #include "aluno.hpp"
-
 #include <iostream>
-
 
 //Execução principal
 int main () {
