@@ -64,4 +64,6 @@
  - Modularização
  - Depuração
 
- # Avaliação e parte 1 do trabalho prático (Semana 06 e 07)
+# Avaliação e parte 1 do trabalho prático (Semana 06 e 07)
+- Tópicos a serem avaliados
+  - 
