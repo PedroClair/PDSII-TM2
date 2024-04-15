@@ -12,6 +12,8 @@ struct Rectangle {
     double getWidth(const Rectangle& rect);
 };
 
+void mainQuestaoPonteiros();
+
 int main() {
     // Exemplo de uso da estrutura Rectangle
     Rectangle rectangle = {5.0, 4.0};
@@ -25,6 +27,8 @@ int main() {
 
     std::cout << "Novo comprimento do retângulo: " << rectangle.getLength(rectangle) << std::endl;
     std::cout << "Nova largura do retângulo: " << rectangle.getWidth(rectangle) << std::endl;
+
+    mainQuestaoPonteiros();
 
     return 0;
 }
@@ -59,4 +63,15 @@ double Rectangle::getLength(const Rectangle& rect) {
 
 double Rectangle::getWidth(const Rectangle& rect) {
     return rect.width;
+}
+
+void mainQuestaoPonteiros(){
+  long value1 = 200000;
+  long value2;
+  long *longPtr = &value1; // Declaração e inicialização de longPtr com o endereço de value1
+  std::cout << "Valor apontado por longPtr: " << *longPtr << std::endl; // Imprime o valor apontado por longPtr
+  value2 = *longPtr; // Atribui o valor apontado por longPtr à variável value2
+  std::cout << "Valor de value2: " << value2 << std::endl; // Imprime o valor de value2
+  std::cout << "Endereço de value1: " << &value1 << std::endl; // Imprime o endereço de value1
+  std::cout << "Endereço armazenado em longPtr: " << longPtr << std::endl; // Imprime o endereço armazenado em longPtr
 }
