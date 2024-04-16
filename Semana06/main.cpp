@@ -68,7 +68,9 @@ double Rectangle::getWidth(const Rectangle& rect) {
 void mainQuestaoPonteiros(){
   long value1 = 200000;
   long value2;
-  long *longPtr = &value1; // Declaração (A) e inicialização (B) de longPtr com o endereço de value1
+
+  long *longPtr; // Declaração (A) 
+  longPtr = &value1; // inicialização (B) de longPtr com o endereço de value1
   std::cout << "Valor apontado por longPtr: " << *longPtr << std::endl; // Imprime o valor apontado por longPtr (C)
   value2 = *longPtr; // Atribui o valor apontado por longPtr à variável value2 (D)
   std::cout << "Valor de value2: " << value2 << std::endl; // Imprime o valor de value2 (E)
