@@ -1,2 +1,0 @@
-# Especificação do Software
-
