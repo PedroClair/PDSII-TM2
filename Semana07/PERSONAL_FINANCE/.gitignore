@@ -1,0 +1,14 @@
+.vscode/
+*.code-workspace
+*.txt
+
+build/*
+!build/.gitkeep
+
+docs/*
+!docs/*.md
+!docs/*.pdf
+
+tests/build/
+
+coverage/
