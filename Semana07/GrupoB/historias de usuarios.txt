@@ -1,0 +1,27 @@
+1) Filtrar por preço
+2) Filtrar por tipo de produtos
+3) Filtrar por descontos
+4) Catalogar os produtos por arquivos
+5) Saber a quantidade de produtos no estoque
+
+
+
+Como um usuário de mercado livre, eu gostaria de poder filtrar os produtos por sua margem de preço,
+para assim poder economizar comprando levas de produtos.
+
+Como um usuário de amazon, eu gostaria de procurar produtos pelo seu tipo, assim facilitando minha
+busca ao mesmo tempo mostrando produtos similares ao que eu procuro.
+
+Como um usuário de aliexpress, eu gostaria de ser capaz de visualizar todos os produtos em desconto,
+para ter a oportunidade de comprar coisas caras por preços mais acessíveis.
+
+Como um usário de submarino, eu gostaria de poder saber quantas unidades de um certo produto
+estão disponíveis no estoque, para poder me planejar com que antecedência eu deva o comprar.
+
+Como um usuário de Nuvemshop, eu gostaria de poder catalogar meus itens para a venda por meio
+de um arquivo de texto, fazendo com que o manejo dos nossos produtos seja mais simples.
+
+
+
+
+
