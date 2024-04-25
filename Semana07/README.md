@@ -25,7 +25,7 @@ Durante as apresentações, vi muitos includes no estilo:
 #include "../include/isso_eh_feio.hpp"
 ```
 
-Sim, isso é realmente bem feio. O ideal e sempre fazer assim:
+Sim, isso é realmente bem feio. O ideal é sempre fazer assim:
 
 ``` c++
 #include "isso_eh_menos_feio.hpp"
@@ -57,12 +57,12 @@ No fim, é legal sim fazer um projeto que usa banco de dados, é a oportunidade 
 
 Para interface gráfica é o mesmo. Você obviamente vai aprender algo a mais, o que é super foda. Maassss, demanda tempo, muito tempo, e de novo, para os fins dessa disciplina, ter interface gráfica ou interagir com o programa somente pela linha de comando não faz muita diferença.
 
-Tenham em mente que o objetivo da disciplina é aprender C++, o Paradigma de Programação Orientada a Objetos e outras práticas relacionadas ao desenvolvimento de software.
+Tenham em mente que o objetivo da disciplina é aprender C++, o paradigma de Programação Orientada a Objetos e outras práticas relacionadas ao desenvolvimento de software.
 
 Resumo da opera: se você quer e tem tempo, lança um banco de dados e interface gráfica. Se não, faz o básico e vai ser feliz.
 
 ## Git
-O git foi criado literalmente para solucionar o problema de trabalho em equipe no desenvolvimento de software. Logo, você precisa aprender o básico dele para evitar surtar (se você estiver surtando, pare e escute [essa música](https://www.youtube.com/watch?v=RqjXn2NflqU)) durante o desenvolvimento do trabalho. Abaixo deixo alguns sugestões de leitura que podem lhe economizar tempo no futuro.
+O git foi criado literalmente para solucionar alguns problemas que surgem durante o trabalho em equipe no desenvolvimento de software. Logo, você precisa aprender o básico dele para evitar surtar (se você estiver surtando, pare e escute [essa música](https://www.youtube.com/watch?v=RqjXn2NflqU)) durante o desenvolvimento do trabalho. Abaixo, deixo algumas sugestões de leitura que podem lhe economizar tempo no futuro.
 
 Se duas ou mais pessoas precisam trabalhar em funcionalidades no projeto ao mesmo tempo, o que você quer aprender é sobre **Branchs**
 
