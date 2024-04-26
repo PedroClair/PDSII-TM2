@@ -80,6 +80,9 @@ No mais, o gitflow e uma forma de trabalhar em equipe com o git. Você não prec
 
 https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar
 
+## Organização do repositório
+Muita gente deixou o **main.cpp** fora da pasta **src**. Para as próximas entregas, considere colocar o main junto aos demais arquivos .cpp dentro de src. Além disso, ao compilar o seu programa, coloque o arquivo executável dentro de uma pasta chamada **bin**. Não deixe o executável na raiz do repositório. Não seja desorganizado ._.
+
 # O fim é triste
 É isso. Mais dicas na monitoria :')
 
