@@ -1,4 +1,4 @@
-#include "circunferencia.hpp"
+#include "ponto3d.hpp"
 
 float Ponto3D::calcularDistancia(Ponto3D* p){
   float dx = p->coordenadaX;

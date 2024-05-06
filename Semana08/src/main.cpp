@@ -1,5 +1,5 @@
 #include "persona.hpp"
-#include "circunferencia.hpp"
+#include "ponto3d.hpp"
 #include "aluno.hpp"
 #include <iostream>
 

@@ -7,12 +7,13 @@
 
 using namespace std;
 
-struct Ponto3D {
-    float coordenadaX;
-    float coordenadaY;
-    float coordenadaZ;
+class Ponto3D {
+    public:
+        float coordenadaX;
+        float coordenadaY;
+        float coordenadaZ;
 
-    float calcularDistancia(Ponto3D* p);
+        float calcularDistancia(Ponto3D* p);
 };
 
 void calculaLocal();
