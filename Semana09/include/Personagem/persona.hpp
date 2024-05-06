@@ -4,12 +4,19 @@
 #include <iostream>
 
 class Persona {
-    std::string nome;
+    private:
+        std::string nome;
 
-    //Métodos inclusos
-    void cumprimento();
+    protected:
+        std::string getName();
+        void setName(std::string novoNome);
+    
+    public:
+        Persona();
+        Persona(std::string);
+        //Métodos inclusos
+        void cumprimento();
+        ~Persona();
 };
-
-
 
 #endif //PERSONA_H
