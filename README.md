@@ -1,4 +1,4 @@
-# Instalação das ferramentas de trabalho (Semana01)
+# Instalação das ferramentas de trabalho
 - MinGW -> Compilador C++
 - VSCode -> IDE de programação e edição de códigos
 - git -> Controle de versionamento
@@ -12,7 +12,7 @@
   - Compile o programa main (e.g. pode-se utilizar o Makefile -> mingw32-make)
   - Execute o programa gerado (program.exe caso tenha utilizado o Makefile)
 
-# Introdução a Linguagem C++ (Semana02)
+# Introdução a Linguagem C++
 - Inclusão de bibliotecas 
   - string, iostream, fstream
 - Uso do namespace
@@ -23,7 +23,7 @@
 - Laços de repetição, 
 - Manipulação de arquivos
 
-# Modelo de Memória (Semana03)
+# Modelo de Memória
 - Hierarquia de Memória
   - Princípio da localidade
     - Temporal
@@ -36,7 +36,7 @@
   - Referência (&x)
   - Deferência (*x)
 
-# Boas Práticas (Semana04)
+# Boas Práticas
 - Apresentação do livro [Clean Code](https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675), para desenvolvimento ágil de software
 - Processo de desenvolvimento ao longo do tempo
 - Regras gerais
@@ -57,13 +57,21 @@
   - Histórias de Usuário
   - Modelagem CRC
 
-# Tipos Abstratos de Dados (Semana 05)
+# Tipos Abstratos de Dados 
  - Definições
  - Estruturas de dados existentes
  - Biblioteca STL
  - Modularização
  - Depuração
 
-# Avaliação e parte 1 do trabalho prático (Semana 06 e 07)
+# Especificação de Software
 
-# Programação Orientada a Objetos - Classes (Semana 08)
+# Programação Orientada a Objetos
+ - Classes vs Objetos
+ - Construtores, Destrutores
+ - Encapsulamento
+ - Herança
+ - Composição
+ - Agregação
+ - Polimorfismo
+
