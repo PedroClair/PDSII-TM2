@@ -2,12 +2,14 @@
 #define PERSONA_H
 
 #include <iostream>
+#include <list>
 
 class Persona {
-    private:
+    public: // Uma boa prática é transformar para private
         std::string nome;
+        std::list<std::string> telefone;
 
-    protected:
+    public: // Uma boa prática é transformar para protected
         std::string getName();
         void setName(std::string novoNome);
     

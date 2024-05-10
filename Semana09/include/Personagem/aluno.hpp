@@ -3,14 +3,13 @@
 
 #include <iostream>
 #include <string>
+#include "persona.hpp"
 
 using namespace std;
 
-class Aluno {
+class Aluno : public Persona {
     public:
-        string nome;
         int matricula;
-    
         float calcularRSG();
 };
 
