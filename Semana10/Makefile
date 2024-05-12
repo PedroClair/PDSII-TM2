@@ -22,21 +22,19 @@ ${BUILD}/bin/ponto3d.o: ${INCLUDE}/Mapa/ponto3d.hpp ${SRC}/Mapa/ponto3d.cpp
 ${BUILD}/bin/main.o: ${INCLUDE}/Personagem/persona.hpp ${INCLUDE}/Personagem/aluno.hpp ${INCLUDE}/Mapa/ponto3d.hpp ${SRC}/main.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE}/Mapa/ -I ${INCLUDE}/Personagem/ -c ${SRC}/main.cpp -o ${BUILD}/bin/main.o
 
+builder:
+	if not exist build mkdir build
+	if not exist build\bin mkdir build\bin
+
 run:
 	${BUILD}/${TARGET}
 
 clean:
 	del build\*.exe
 	del build\bin\*.o
-.PHONY: clean
 
 test:
-	@echo test project
 	g++ -std=c++11 -Wall -g test.cpp -o progTeste
-	@echo test completed
 
 cleanTest:
-	@echo clean project
 	del progTeste.exe
-	@echo clean completed
-.PHONY: cleanTest
