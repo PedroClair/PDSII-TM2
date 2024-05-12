@@ -59,7 +59,7 @@ class B1 : public A1 {
 
 
 
-//Métodos inclusos
+//Métodos Globais
 void cumprimento();
 
 //Execução principal
