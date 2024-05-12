@@ -1,5 +1,3 @@
-# g++ -std=c++11 -Wall -g notasDeAula.cpp -o prog
-
 CC = g++
 CFLAGS = -std=c++11 -Wall -g
 TARGET = programa
