@@ -56,9 +56,6 @@ class B1 : public A1 {
     B1(int a, int b) : A1(a), _b(b) {};
 };
 
-
-
-
 //Métodos Globais
 void cumprimento();
 
