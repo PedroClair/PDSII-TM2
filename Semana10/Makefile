@@ -1,15 +1,11 @@
 CC = g++
-CFLAGS = -std=c++11 -Wall -g
+CFLAGS = -std=c++11
+CFLAGS_DEBUG = -std=c++11 -Wall -g
 TARGET = prog
 
 BUILD = ./build
 SRC = ./src
 INCLUDE = ./include
-
-test:
-	g++ -std=c++11 -Wall -g test.cpp -o progTeste
-
-build: ${BUILD}/${TARGET}
 
 ${BUILD}/${TARGET}: ${BUILD}/bin/persona.o ${BUILD}/bin/aluno.o ${BUILD}/bin/ponto3d.o ${BUILD}/bin/main.o
 	${CC} ${CFLAGS} ${BUILD}/bin/aluno.o ${BUILD}/bin/ponto3d.o ${BUILD}/bin/persona.o ${BUILD}/bin/main.o -o ${BUILD}/${TARGET}
@@ -28,3 +24,19 @@ ${BUILD}/bin/main.o: ${INCLUDE}/Personagem/persona.hpp ${INCLUDE}/Personagem/alu
 
 run:
 	${BUILD}/${TARGET}
+
+clean:
+	del build\*.exe
+	del build\bin\*.o
+.PHONY: clean
+
+test:
+	@echo test project
+	g++ -std=c++11 -Wall -g test.cpp -o progTeste
+	@echo test completed
+
+cleanTest:
+	@echo clean project
+	del progTeste.exe
+	@echo clean completed
+.PHONY: cleanTest
