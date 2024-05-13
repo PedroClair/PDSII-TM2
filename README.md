@@ -65,6 +65,10 @@
  - Depuração
 
 # Especificação de Software
+ - Especificação de Requisitos
+ - Modelo Orientado a Objeto
+ - História de Usuário
+ - Modelagem CRC
 
 # Programação Orientada a Objetos
  - Classes vs Objetos
@@ -72,6 +76,4 @@
  - Encapsulamento
  - Herança
  - Composição
- - Agregação
  - Polimorfismo
-
