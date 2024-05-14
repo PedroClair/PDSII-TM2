@@ -35,6 +35,7 @@ clean:
 
 test:
 	g++ -std=c++11 -Wall -g test.cpp -o progTeste
+	.\progTeste.exe
 
 cleanTest:
 	del progTeste.exe

@@ -2,45 +2,47 @@
 #include <string>
 
 // Include.HPP ( O QUE É - USUÁRIO )
-class Ola{
+//PERSONA
+class Persona{
   private:
     std::string mensagem;
   protected:
     std::string getMensagem();
     void setMensagem(std::string);
   public:
-    Ola();
-    Ola(std::string);
+    Persona();
+    Persona(std::string);
     void cumprimento();
-    ~Ola();
+    ~Persona();
 };
 
 //Execução principal
 int main () {
-  Ola oi("Baum? Ou baum dimais?");
+  Persona oi("Baum? Ou baum dimais?");
   oi.cumprimento();
   return 0;
 }
 
-//Implementação do código
-Ola::Ola(){
+//Implementação do código 
+//Persona
+Persona::Persona(){
   this->mensagem = "";
 }
 
-Ola::Ola(std::string msg){
+Persona::Persona(std::string msg){
   this->mensagem = msg;
 }
 
-std::string Ola::getMensagem(){
+std::string Persona::getMensagem(){
   return this->mensagem;
 }
 
-void Ola::setMensagem(std::string newMsg){
+void Persona::setMensagem(std::string newMsg){
   this->mensagem = newMsg;
 }
 
-void Ola::cumprimento(){
+void Persona::cumprimento(){
   std::cout << this->mensagem << std::endl; 
 }
 
-Ola::~Ola(){}
+Persona::~Persona(){}
