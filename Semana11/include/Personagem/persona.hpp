@@ -7,7 +7,6 @@
 class Persona {
     private: // Uma boa prática é transformar para private
         std::string nome;
-        std::list<std::string> telefone;
 
     protected: // Uma boa prática é transformar para protected
         std::string getName();

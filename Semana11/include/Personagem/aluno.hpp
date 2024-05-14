@@ -8,8 +8,9 @@
 using namespace std;
 
 class Aluno : public Persona {
-    public:
+    private:
         int matricula;
+    protected:
         float calcularRSG();
 };
 
