@@ -18,7 +18,7 @@ class Persona{
 
 //Execução principal
 int main () {
-  Persona oi("Baum? Ou baum dimais?");
+  Persona oi("Baum?");
   oi.cumprimento();
   return 0;
 }
